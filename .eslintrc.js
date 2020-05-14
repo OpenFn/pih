@@ -4,16 +4,16 @@ module.exports = {
     'no-console': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'no-param-reassign': ['error', { props: false }],
-    'comma-dangle': ['error', 'never']
+    'comma-dangle': ['error', 'es5'],
   },
   globals: {
     alterState: 'readonly',
     getPatients: 'readonly',
-    createEncounter: 'readonly'
+    createEncounter: 'readonly',
     // execute: 'readonly',
     // field: 'readonly',
     // fields: 'readonly',
-    // dataValue: 'readonly',
+    dataValue: 'readonly',
     // dataPath: 'readonly',
     // create: 'readonly',
     // update: 'readonly',
@@ -23,5 +23,5 @@ module.exports = {
     // bulk: 'readonly',
     // each: 'readonly',
     // combine: 'readonly',
-  }
+  },
 };
