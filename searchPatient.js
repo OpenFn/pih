@@ -1,4 +1,5 @@
-// Search for OpenMRS existing patients using EMRID
+//**USE CASE**Integrate CommCare with OpenMRS for real-time patient record exchange, duplicate-checking & automated data cleaning //
+// 1. Search for OpenMRS existing patients using EMRID
 getPatients(
   {
     identifier: state => state.data.emrId,
@@ -10,10 +11,10 @@ getPatients(
   }
 );
 
-// If found, use `uuid` to create new lab encounter
+// 2. If found, use `uuid` to create new lab encounter
 createEncounter({
-  encounterDatetime: state => state.references[0].visitDate,
-  patient: dataValue('uuid'),
+  encounterDatetime: state => state.references[0].visitDate, 
+  patient: dataValue('uuid'), //dynamically fill with CommCare data
   encounterType: 'f01c54cb-2225-471a-9cd5-d348552c337c',
   location: dataValue('identifiers[0].location.uuid'),
   encounterProviders: [
