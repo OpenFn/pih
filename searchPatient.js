@@ -1,4 +1,4 @@
-// Search for patient using EMRID
+// Search for OpenMRS existing patients using EMRID
 getPatients(
   {
     identifier: state => state.data.emrId,
